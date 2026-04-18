@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Matieu.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6fd258014605b56df26d8f40a773448ed7891cc7")]
 [assembly: System.Reflection.AssemblyProductAttribute("Matieu.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Matieu.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
