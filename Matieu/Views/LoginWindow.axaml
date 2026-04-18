@@ -1,0 +1,86 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="Matieu.LoginWindow"
+        Title="Матье"
+        Width="900" Height="550"
+        CanResize="False"
+        WindowStartupLocation="CenterScreen"
+        SystemDecorations="None"
+        Background="White"
+        Icon="avares://Matieu/Resources/Logo.ico">
+
+    <Border BorderBrush="Black" BorderThickness="2">
+        <Grid RowDefinitions="40,*">
+
+            <Grid Grid.Row="0" Name="titleBar" ColumnDefinitions="*,Auto,Auto" Background="Black">
+                <TextBlock Grid.Column="0" Text="МАТЬЕ" Foreground="White"
+                           VerticalAlignment="Center" Margin="15,0" FontSize="14" FontWeight="Bold"/>
+                <Button Grid.Column="1" Name="minimizeBtn" Content="—"
+                        Height="40" Width="45" Background="Transparent"
+                        Foreground="White" BorderThickness="0" FontSize="16"/>
+                <Button Grid.Column="2" Name="closeBtn" Content="✕"
+                        Height="40" Width="45" Background="Transparent"
+                        Foreground="White" BorderThickness="0" FontSize="16"/>
+            </Grid>
+
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="400"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- Левая декоративная панель -->
+                <Border Grid.Column="0" Background="Black">
+                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <Border Width="120" Height="120" BorderBrush="White" BorderThickness="2" 
+                                CornerRadius="60" Margin="0,0,0,20">
+                            <Image Name="logoImage" Source="avares://Matieu/Resources/Logo.png" 
+                                   Stretch="Uniform" Margin="10"/>
+                        </Border>
+                        <TextBlock Text="СИСТЕМА УПРАВЛЕНИЯ" Foreground="White" 
+                                   FontSize="16" FontWeight="Bold" HorizontalAlignment="Center"/>
+                        <TextBlock Text="УСЛУГАМИ" Foreground="White" 
+                                   FontSize="16" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,2,0,0"/>
+                    </StackPanel>
+                </Border>
+
+                <!-- Правая панель с формой входа -->
+                <StackPanel Grid.Column="1" VerticalAlignment="Center" Width="320" HorizontalAlignment="Center">
+                    <TextBlock Text="ВХОД В СИСТЕМУ" FontSize="24" FontWeight="Bold"
+                               HorizontalAlignment="Center" Margin="0,0,0,40" Foreground="Black"/>
+
+                    <Border BorderBrush="Black" BorderThickness="0,0,0,2" Margin="0,0,0,25">
+                        <StackPanel>
+                            <TextBlock Text="ЛОГИН" FontSize="11" FontWeight="Bold" 
+                                       Margin="0,0,0,8" Foreground="#666666"/>
+                            <TextBox Name="loginBox" Height="38" Margin="0,0,0,8"
+                                     BorderThickness="0" Background="Transparent"
+                                     FontSize="14"/>
+                        </StackPanel>
+                    </Border>
+
+                    <Border BorderBrush="Black" BorderThickness="0,0,0,2" Margin="0,0,0,40">
+                        <StackPanel>
+                            <TextBlock Text="ПАРОЛЬ" FontSize="11" FontWeight="Bold" 
+                                       Margin="0,0,0,8" Foreground="#666666"/>
+                            <TextBox Name="passwordBox" PasswordChar="●" Height="38" Margin="0,0,0,8"
+                                     BorderThickness="0" Background="Transparent"
+                                     FontSize="14"/>
+                        </StackPanel>
+                    </Border>
+
+                    <Button Name="loginBtn" Content="ВОЙТИ"
+                            HorizontalAlignment="Stretch" Height="45"
+                            Background="Black" Foreground="White" 
+                            BorderThickness="0" FontSize="14" FontWeight="Bold"
+                            Margin="0,0,0,15"/>
+
+                    <TextBlock Name="errorText" Foreground="#CC0000"
+                               HorizontalAlignment="Center" Margin="0,10,0,0" 
+                               IsVisible="False" FontSize="12"/>
+                </StackPanel>
+
+            </Grid>
+        </Grid>
+    </Border>
+</Window>

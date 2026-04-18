@@ -1,0 +1,25 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="Matieu.ConfirmDialog"
+        Width="350" Height="160"
+        CanResize="False"
+        WindowStartupLocation="CenterOwner"
+        SystemDecorations="BorderOnly"
+        Background="White">
+
+    <StackPanel VerticalAlignment="Center" Margin="30">
+        <TextBlock Name="messageText" FontSize="13"
+                   HorizontalAlignment="Center" TextWrapping="Wrap"
+                   Margin="0,0,0,25" Foreground="Black"/>
+        <Grid ColumnDefinitions="*,15,*">
+            <Button Grid.Column="0" Name="yesBtn" Content="Да"
+                    HorizontalAlignment="Stretch" Height="35"
+                    Background="White" Foreground="Black" 
+                    BorderBrush="Black" BorderThickness="1"/>
+            <Button Grid.Column="2" Name="noBtn" Content="Нет"
+                    HorizontalAlignment="Stretch" Height="35"
+                    Background="White" Foreground="Black" 
+                    BorderBrush="Black" BorderThickness="1"/>
+        </Grid>
+    </StackPanel>
+</Window>
